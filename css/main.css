@@ -1,0 +1,68 @@
+
+/*Philip yeh, This is the css file */
+body{
+  /* first set color of text, fonts/size and line height */
+  color:black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:16px;
+  line-height:1.6em;
+  margin:0;
+}
+h1{
+  text-align: : center;
+}
+
+/* set margin for multitable */
+#MultiTable {
+  margin:auto;
+  width: 100%;
+  margin:15px 15px;
+}
+
+.container2{ /* make it so, that there is a scrollable container for the container*/
+  height: 425px;
+  overflow: auto;
+
+}
+/* Using the resources given to us and w3 schools used pseudo class techniques to style the rows and coloumns https://www.w3schools.com/css/css_pseudo_classes.asp*/
+tbody > tr > td {
+  /*set background height and grid lines of entire table*/
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+tbody > tr:first-child > td{
+  /*first row of table */
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+}
+
+tbody > tr > td:first-child {
+  /*first colomn styling*/
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+}
+
+/*eliminate the borders of top left box, the set it to white so not visable*/
+tbody > tr:first-child > td:first-child{
+  border-top: none;
+  border-left: none;
+  background: white;
+}
+
+/*Box around form*/
+.row{
+  border: 1px solid black;
+  padding: 15px 15px;
+  margin:15px 15px;
+}
+.jumbotron{
+  background-color: orange;
+  text-align: center;
+}

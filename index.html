@@ -1,0 +1,71 @@
+<!-- Philip yeh, this is the HTML document for the dynamic table where I created a form and linked the JS and css Files -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edgg">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>Philip's dynamic table</title>
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <div class="jumbotron"><!-- used previous class excerise to create a header -->
+            <div class ="container">
+                <h1>Welcome</h1>
+                <p1 id = "error">This is a dynamic calculator, please enter a number between -50 and 50 </p1>
+            </div>
+        </div>
+    <body>
+      <div class ="container"><!-- Following the steps of pdf, create a form that asks for 4 values  -->
+        <div class="row">
+          <div class= "col-md-12"><!-- I utilized bootstrap and some of the previous class works to create this form -->
+            <form id="Tableform" name="Tableform"><!--When i tried to debug, the form would reset of bad values I learned from here http://www.java2s.com/Tutorials/Javascript/Javascript_Form_How_to/Submit_Button/Return_false_in_form_Submit_button_click_event_to_stop_form_submission.htm, you can stop that -->
+              <label>Minimum Row Value: </label>
+              <input type="number" name="HorizonStartRow" id="HorizonStartRow" value="1">
+              <br>
+              <label>Maximum Row Value: </label>
+              <input type="number" name="HorizonEndRow" id="HorizonEndRow" value="5">
+              <br>
+              <label>Minimum Column Value: </label>
+              <input type="number" name="VerticalStartRow" id="VerticalStartRow" value="1">
+              <br>
+              <label>Maximum Column Value: </label>
+              <input type="number" name="VerticleEndRow" id="VerticleEndRow" value="5">
+              <br>
+              <input id="button_submit" class="submit_button" type="submit" >
+            </form>
+
+
+          </div>
+        </div>
+        <div class="container2"
+          <div id="MultiTable"><!-- this is where the table will be placed-->
+        </div>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="js/CreateTable.js"></script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+      <script>
+        $(document).ready(function(){
+          validate();
+        });
+      </script>
+    </body>
+
+
+</html>
