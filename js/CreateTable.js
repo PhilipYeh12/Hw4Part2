@@ -3,8 +3,62 @@
 //Philip Yeh
 //GUI Assignment: create dynamic table with validation part 1
 
-function validate() {
+function auto_submit() {
+  // If the form is valid
+  if( $("#Tableform").valid() == true ) {
 
+    $("#Tableform").submit();
+  }
+}
+
+function slider() {
+  // Horizontal Start Slider
+  $("#sliderHStart").slider({
+    min: -50,
+    max: 50,
+    slide: function(event, ui) {
+      $("#HorizonStartRow").val(ui.value);
+      auto_submit();
+    }
+  });
+
+
+  // Horizontal End Slider
+  $("#sliderHEnd").slider({
+    min: -50,
+    max: 50,
+    slide: function(event, ui) {
+      $("#HorizonEndRow").val(ui.value);
+      auto_submit();
+    }
+  });
+
+
+  // Vertical Start Slider
+  $("#sliderVStart").slider({
+    min: -50,
+    max: 50,
+    slide: function(event, ui) {
+      $("#VerticalStartRow").val(ui.value);
+      auto_submit();
+    }
+  });
+
+
+  // Vertical End Slider
+  $("#sliderVEnd").slider({
+    min: -50,
+    max: 50,
+    slide: function(event, ui) {
+      $("#VerticleEndRow").val(ui.value);
+      auto_submit();
+    }
+  });
+
+
+}
+
+function validate() {
 
   $("#Tableform").validate({
 
@@ -22,7 +76,7 @@ function validate() {
         number: true,
         required: true
       },
-      VerticalStartRow: {  
+      VerticalStartRow: {
         min: -50,
         max: 50,
         number: true,
@@ -74,6 +128,7 @@ function validate() {
 
       $("#MultiTable").empty();
     }
+
 
 
   });

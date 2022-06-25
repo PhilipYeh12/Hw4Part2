@@ -29,18 +29,31 @@
       <div class ="container"><!-- Following the steps of pdf, create a form that asks for 4 values  -->
         <div class="row">
           <div class= "col-md-12"><!-- I utilized bootstrap and some of the previous class works to create this form -->
-            <form id="Tableform" name="Tableform"><!--When i tried to debug, the form would reset of bad values I learned from here http://www.java2s.com/Tutorials/Javascript/Javascript_Form_How_to/Submit_Button/Return_false_in_form_Submit_button_click_event_to_stop_form_submission.htm, you can stop that -->
-              <label>Minimum Row Value: </label>
-              <input type="number" name="HorizonStartRow" id="HorizonStartRow" value="1">
+            <form id="Tableform" name="Tableform" ><!--When i tried to debug, the form would reset of bad values I learned from here http://www.java2s.com/Tutorials/Javascript/Javascript_Form_How_to/Submit_Button/Return_false_in_form_Submit_button_click_event_to_stop_form_submission.htm, you can stop that -->
+              <div>
+                <label>Minimum Row Value: </label>
+                <input type="number" name="HorizonStartRow" id="HorizonStartRow" value="1"required>
+                <div id="sliderHStart"></div><!--part2 added div tags for the slider -->
+              </div>
+
               <br>
-              <label>Maximum Row Value: </label>
-              <input type="number" name="HorizonEndRow" id="HorizonEndRow" value="5">
+              <div>
+                <label>Maximum Row Value: </label>
+                <input type="number" name="HorizonEndRow" id="HorizonEndRow" value="5"required>
+                <div id="sliderHEnd"></div>
+              </div>
               <br>
-              <label>Minimum Column Value: </label>
-              <input type="number" name="VerticalStartRow" id="VerticalStartRow" value="1">
+              <div>
+                <label>Minimum Column Value: </label>
+                <input type="number" name="VerticalStartRow" id="VerticalStartRow" value="1" required>
+                <div id="sliderVStart"></div>
+              </div>
               <br>
-              <label>Maximum Column Value: </label>
-              <input type="number" name="VerticleEndRow" id="VerticleEndRow" value="5">
+              <div>
+                <label>Maximum Column Value: </label>
+                <input type="number" name="VerticleEndRow" id="VerticleEndRow" value="5"required>
+                <div id="sliderVEnd"></div>
+              </div>
               <br>
               <input id="button_submit" class="submit_button" type="submit" >
             </form>
@@ -48,21 +61,28 @@
 
           </div>
         </div>
-        <div class="container2"
+        <div class="container2">
           <div id="MultiTable"><!-- this is where the table will be placed-->
         </div>
         </div>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
       <!-- Latest compiled and minified JavaScript -->
       <script src="js/CreateTable.js"></script>
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+      <!--New librariesto handle sliders  https://developers.google.com/speed/libraries -->
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
       <script>
         $(document).ready(function(){
+          slider();
           validate();
+          
         });
       </script>
     </body>
