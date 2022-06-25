@@ -32,26 +32,26 @@
             <form id="Tableform" name="Tableform" ><!--When i tried to debug, the form would reset of bad values I learned from here http://www.java2s.com/Tutorials/Javascript/Javascript_Form_How_to/Submit_Button/Return_false_in_form_Submit_button_click_event_to_stop_form_submission.htm, you can stop that -->
               <div>
                 <label>Minimum Row Value: </label>
-                <input type="number" name="HorizonStartRow" id="HorizonStartRow" value="1"required>
-                <div id="sliderHStart"></div><!--part2 added div tags for the slider -->
+                <input type="number" name="HorizonStartRow" id="HorizonStartRow" value="1">
+                <div id="sliderHStart"></div><!--part2 added div tags for the slider as noted from given documentation-->
               </div>
 
               <br>
               <div>
                 <label>Maximum Row Value: </label>
-                <input type="number" name="HorizonEndRow" id="HorizonEndRow" value="5"required>
+                <input type="number" name="HorizonEndRow" id="HorizonEndRow" value="1">
                 <div id="sliderHEnd"></div>
               </div>
               <br>
               <div>
                 <label>Minimum Column Value: </label>
-                <input type="number" name="VerticalStartRow" id="VerticalStartRow" value="1" required>
+                <input type="number" name="VerticalStartRow" id="VerticalStartRow" value="1" >
                 <div id="sliderVStart"></div>
               </div>
               <br>
               <div>
                 <label>Maximum Column Value: </label>
-                <input type="number" name="VerticleEndRow" id="VerticleEndRow" value="5"required>
+                <input type="number" name="VerticleEndRow" id="VerticleEndRow" value="1">
                 <div id="sliderVEnd"></div>
               </div>
               <br>
@@ -82,7 +82,8 @@
         $(document).ready(function(){
           slider();
           validate();
-          
+          auto_submit();
+
         });
       </script>
     </body>

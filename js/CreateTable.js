@@ -1,9 +1,11 @@
 
-//For this java script assigment I copied my last assigment and then used the reference site that taught about validation and using rules
+//For this java script assigment I continued on to part 2, where it required me to code sliders and tab functions
+//I actually was not able to complete the tab portion of this assignment. I decided to just cut my losses and focus on make everything else work
+//Fortunattly I was able to understand the documentation for the sliders, and created a 2 way binding method that updates the table dynamiclly
 //Philip Yeh
-//GUI Assignment: create dynamic table with validation part 1
+//GUI Assignment: create dynamic table with validation part 2
 
-function auto_submit() {
+function auto_submit() {//in order to create a 2 way binding table that alters the form, I made it so that everytime you use the slider, it submits the form. This makes the form counter update to what the slider is.
   // If the form is valid
   if( $("#Tableform").valid() == true ) {
 
@@ -12,7 +14,7 @@ function auto_submit() {
 }
 
 function slider() {
-  // Horizontal Start Slider
+  //
   $("#sliderHStart").slider({
     min: -50,
     max: 50,
@@ -23,7 +25,7 @@ function slider() {
   });
 
 
-  // Horizontal End Slider
+  //
   $("#sliderHEnd").slider({
     min: -50,
     max: 50,
@@ -34,7 +36,7 @@ function slider() {
   });
 
 
-  // Vertical Start Slider
+  //
   $("#sliderVStart").slider({
     min: -50,
     max: 50,
@@ -45,7 +47,7 @@ function slider() {
   });
 
 
-  // Vertical End Slider
+  //
   $("#sliderVEnd").slider({
     min: -50,
     max: 50,
@@ -93,28 +95,28 @@ function validate() {
 
     messages: {
       HorizonStartRow: {
-        number: "ERROR: you did not enter a valid number.",
-        min: "ERROR: number entered is too small.",
-        max: "ERROR: number entered is too large.",
-        required: "ERROR: no number was entered."
+        number: "ERROR: you did not enter a valid number. Please enter another",
+        min: "ERROR: number entered is too small. Must be greater than -50",
+        max: "ERROR: number entered is too large. Must be less than 50",
+        required: "ERROR: no number was entered. Try again"
       },
       HorizonEndRow: {
-        number: "ERROR: you did not enter a valid number.",
-        min: "ERROR: number entered is too small.",
-        max: "ERROR: number entered is too large.",
-        required: "ERROR: no number was entered."
+        number: "ERROR: you did not enter a valid number. Please enter another",
+        min: "ERROR: number entered is too small. Must be greater than -50",
+        max: "ERROR: number entered is too large. Must be less than 50",
+        required: "ERROR: no number was entered. Try again"
       },
       VerticalStartRow: {
-        number: "ERROR: you did not enter a valid number.",
-        min: "ERROR: number entered is too small.",
-        max: "ERROR: number entered is too large.",
-        required: "ERROR: no number was entered."
+        number: "ERROR: you did not enter a valid number. Please enter another",
+        min: "ERROR: number entered is too small. Must be greater than -50",
+        max: "ERROR: number entered is too large. Must be less than 50",
+        required: "ERROR: no number was entered. Try again"
       },
       VerticleEndRow: {
-        number: "ERROR: you did not enter a valid number.",
-        min: "ERROR: number entered is too small.",
-        max: "ERROR: number entered is too large.",
-        required: "ERROR: no number was entered."
+        number: "ERROR: you did not enter a valid number. Please enter another",
+        min: "ERROR: number entered is too small. Must be greater than -50",
+        max: "ERROR: number entered is too large. Must be less than 50",
+        required: "ERROR: no number was entered. Try again"
       }
     },
 
